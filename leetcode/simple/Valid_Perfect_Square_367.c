@@ -11,21 +11,27 @@ printf("%d\n",res);
 scanf("%d",&res);
 }
 bool isPerfectSquare(int num){
-for (int i = 0; i <= num; i++)
+// 1,4,9,16,25...等差数列？
+if (num==0)
 {
     /* code */
-     int a = i*i;
-     printf("%d\n",a);
-     if (a==num)
-     {
-         return true;
-     }
-     if (a>num)
-     {
-         return false;
-     }
-     
-     
+    return true;
 }
+
+for (int i = 0; i <= num; i++)
+{
+    //1
+    //1+3
+    //1+3+5
+    int add = 2*i+1;
+    num-=add; 
+    if (num == 0)
+    {
+        return true;
+    }
+    
+}
+
 return false;
+
 }
