@@ -1,8 +1,13 @@
-#include<stdio.h>
-#include<stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 int main()
 {
-
+    char a[10] = "Hello\0";
+    printf("%s\n",a);
+    reverseString(a,5);
+    printf("%s\n",a);
+    scanf("%s",a);
 }
 
 void reverseString(char* s,int sSize)
