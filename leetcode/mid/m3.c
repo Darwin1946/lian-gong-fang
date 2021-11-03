@@ -1,27 +1,16 @@
-#include<string.h>
 int lengthOfLongestSubstring(char * s){
     int len = strlen(s);
-    int first=0;
-    int last=0;
-    int num;
-    for (int i = 0; i < len ; i++)
-    {
-        char f = s[i];
-        num = 1;
-        for (int j = i+1; j < len; j++)
-        {
-            
-            char l = s[j];
-            if (l==f)
-            {
-                return num;
-            }
-            num++;
-            
+    if(len == 0)
+        return 0;
+    int S[256] = {0};//通过字符串得ASCII码来计数
+    int i, j, m = 0;
+    for(i = 0, j = 0; j < len; j++){
+        S[s[j]]++;
+        while(S[s[j]] > 1){
+            S[s[i]]--;
+            i++;
         }
-        
+        m = fmax(m, j - i + 1);
     }
-    return num;
-    
-
+    return m;
 }
