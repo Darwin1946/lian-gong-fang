@@ -1,0 +1,5 @@
+﻿  game.c
+F:\my\lian-gong-fang\JustForFun\sanziqi\game.c(94,16): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+  gametester.c
+  正在生成代码...
+  sanziqi.vcxproj -> F:\my\lian-gong-fang\JustForFun\sanziqi\x64\Debug\sanziqi.exe
