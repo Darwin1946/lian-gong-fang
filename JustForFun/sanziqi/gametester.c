@@ -12,7 +12,7 @@ void menu()
 
 void game()
 {
-	char ret = 0;
+	char ret = 'C';
 	//数组存放棋盘信息
 	char board[ROW][COL];
 	//初始化棋盘

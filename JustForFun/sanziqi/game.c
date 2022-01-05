@@ -91,7 +91,7 @@ void ComputerMove(char board[ROW][COL], int row, int col)
 		y = rand() % col;
 		if (board[x][y] == ' ')
 		{
-			board[x][y] == '#';
+			board[x][y] = '#';
 			break;
 		}
 	}
@@ -107,10 +107,13 @@ for (i = 0; i < row - 1; i++)
 	{
 		if (board[i][j] == ' ')
 		{
+			char a = board[i][j];
+			int b = 0;
 			return 0;
 		}
 	}
 }
+
 return 1;
 }
 
@@ -142,12 +145,14 @@ char IsWin(char board[ROW][COL], int row, int col)
 		{
 			return board[1][1];
 		}
+		//printf("xsad%d", IsFull(board, ROW, COL));
 
 		if (1 == IsFull(board, ROW, COL));
 		{
-			return 'Q';
+			return 'C';
 		}
 
+		return 'C';
 
 
 
